@@ -2,8 +2,12 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { signUpSchema } from "../../utils/validation";
 import AuthInput from "./AuthInput";
+import { useSelector } from "react-redux";
+import PulseLoader from "react-spinners/PulseLoader";
+import { Link } from "react-router-dom";
 
 export default function RegisterForm(){
+    const {status}=useSelector((state)=>state.user)
     const { register, handleSubmit, watch, formState: { errors } } = useForm({resolver: yupResolver(signUpSchema)});
     const onSubmit = data => console.log(data);
     return(
@@ -43,7 +47,14 @@ export default function RegisterForm(){
                     register={register}
                     error={errors?.password?.message}
                     />
-                    <button type="submit">submit</button>
+                    <button className="w-full flex justify-center bg-green_1 text-gray-100 p-4 rounded-full tracking-wide font-semibold
+                    focus:outline-none hover:bg-green_2 shadow-lg cursor-pointer transition ease-in duration-300" type="submit">
+                        {status == "loading" ? (<PulseLoader color="#fff" size={16} />) : ("Sign Up")}
+                    </button>
+                    <p className="flex flex-col items-center justify-center mt-10 text-center text-md dark:text-dark_text_1 ">
+                        <span> Have an account</span>
+                        <Link href="login" className=" hover:underline cursor-pointer transition ease-in duration-300">Sign In</Link>
+                    </p>
                 </form>
             </div>
         </div>
