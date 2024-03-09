@@ -9,9 +9,10 @@ import { logout } from './features/userSlice';
 
 function App() {
   const dispatch = useDispatch();
-  // const {user}= useSelector((state)=>state.user)
-  const {user}= useSelector((state)=>({...state}));
+  const {user}= useSelector((state)=>state.user)
+  // const {user}= useSelector((state)=>({...state}));
   console.log(user)
+  const {token} = user;
   return (
     <div className='dark'>
       <Router>
