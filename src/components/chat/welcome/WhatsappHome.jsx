@@ -3,10 +3,10 @@ import { Logo } from '../../../svg';
 
 const WhatsappHome = () => {
     return (
-        <div className='h-full w-full dark:bg-dark_bg_4 select-none border-l dark:border-l-darkborder_1
+        <div className='h-full w-full dark:bg-dark_bg_4 select-none border-l dark:border-l-darkborder_2
         border-b-[6px] border-b-green_2'>
 
-            <div className='mt-1,5 w-full h-full flex flex-col gap-y-8 items-center justify-center'>
+            <div className='mt-1.5 w-full h-full flex flex-col gap-y-8 items-center justify-center'>
                 <span >
                     <Logo/>
                 </span>
