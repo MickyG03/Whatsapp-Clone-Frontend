@@ -23,7 +23,24 @@ export const getConversations = createAsyncThunk("conversation/all",
         }catch(error){
             return rejectWithValue(error.response.data.error.message);
         }
-})
+});
+
+export const open_create_conversations = createAsyncThunk("conversation/open_create",
+    async(values, {rejectWithValue})=>{
+        const{token,receiver_id} = values;
+        try{
+            const {data} = await axios.post(CONVERSATION_ENDPOINT,
+                {receiver_id},
+                {
+                    headers:{
+                        Authorization:`Bearer ${token}`
+                    }
+            });
+            return data;
+        }catch(error){
+            return rejectWithValue(error.response.data.error.message);
+        }
+});
 
 export const chatSlice = createSlice({
     name:"chat",
@@ -46,9 +63,20 @@ export const chatSlice = createSlice({
             state.status = "failed";
             state.error = action.payload;
         })
+        .addCase(open_create_conversations.pending,(state,action)=>{
+            state.status = "loading";
+        })
+        .addCase(open_create_conversations.fulfilled,(state,action)=>{
+            state.status = "succeeded";
+            state.activeConversation=action.payload;
+        })
+        .addCase(open_create_conversations.rejected,(state,action)=>{
+            state.status = "failed";
+            state.error = action.payload;
+        });
     }
 });
 
-export const {} = chatSlice.actions;
+export const {setActiveConversation} = chatSlice.actions;
 
 export default chatSlice.reducer;

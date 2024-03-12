@@ -1,11 +1,24 @@
-import moment from "moment";
+import { open_create_conversations } from "../../../features/chatSlice";
+import { getConversationId } from "../../../utils/chat";
 import { dateHandler } from "../../../utils/date";
+import { useDispatch, useSelector } from "react-redux";
 
 const Conversation = ({convo}) => {
-
+    const dispatch = useDispatch();
+    const {user}= useSelector((state)=> state.user);
+    const{token} = user;
+    const values = {
+        receiver_id:getConversationId(user,convo.users),
+        token,
+    }
+    const openConversation=()=>{
+        dispatch(open_create_conversations(values))
+    }
     return (
 
-        <li className=" h-[72px]  w-full dark:bg-dark_bg_1 hover:dark:bg-dark_bg_2 cursor-pointer
+        <li
+        onClick={()=>openConversation()}
+        className=" h-[72px]  w-full dark:bg-dark_bg_1 hover:dark:bg-dark_bg_2 cursor-pointer
                 dark:text-dark_text_1 px-[10px]">
 
                     <div className="relative w-full flex items-center justify-between py-[10px]">
