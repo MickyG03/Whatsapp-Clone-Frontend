@@ -22,7 +22,7 @@ const ChatMessages = () => {
                         </div>
                     ))
                 }
-                <div ref={endRef}></div>
+                <div className='mb-2' ref={endRef}></div>
             </div>
         </div>
     );

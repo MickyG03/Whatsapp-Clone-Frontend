@@ -31,7 +31,7 @@ const ChatActions = () => {
         setLoading(false);
     }
     return (
-        <form className="dark:bg-dark_bg_2 h-[60px] w-full flex items-center absolute bottom-7 py-2 px-4 select-none"
+        <form className="dark:bg-dark_bg_2 h-[60px] w-full flex items-center absolute bottom-0 py-2 px-4 select-none"
             onSubmit={(e)=>SendMessageHandler(e)}
         >
             <div className='w-full flex items-center gap-x-2'>

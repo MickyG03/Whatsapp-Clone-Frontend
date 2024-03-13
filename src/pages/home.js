@@ -9,7 +9,7 @@ export default function Home(){
     const dispatch = useDispatch();
     const {user} = useSelector((state)=> state.user)
     const {activeConversation} = useSelector((state)=>state.chat);
-    
+
     useEffect(()=>{
         if(user?.token){
             dispatch(getConversations(user.token));
@@ -17,9 +17,9 @@ export default function Home(){
     },[user]);
     return(
         <div className="h-screen dark:bg-dark_bg_1 flex items-center
-        justify-center py-[19px] overflow-hidden">
+        justify-center overflow-hidden">
 
-        <div className="container h-screen flex">
+        <div className="container py-[19px]  h-screen flex">
             {/* Sidebar */}
             <Sidebar/>
             {
