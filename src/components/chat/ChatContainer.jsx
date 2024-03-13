@@ -3,6 +3,7 @@ import ChatHeader from './header/ChatHeader';
 import ChatMessages from './messages/chatMessages';
 import { useDispatch, useSelector } from 'react-redux';
 import { getConversationMessages } from '../../features/chatSlice.js';
+import ChatActions from './actions/ChatActions.jsx';
 
 const ChatContainer = () => {
     const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const ChatContainer = () => {
     useEffect(()=>{
 
         if(activeConversation?._id){
-        
+
             dispatch(getConversationMessages(values))
         }
     },[activeConversation]);
@@ -29,6 +30,7 @@ const ChatContainer = () => {
             <div>
                 <ChatHeader/>
                 <ChatMessages/>
+                <ChatActions/>
             </div>
         </div>
     );

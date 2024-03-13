@@ -1,3 +1,4 @@
 import WhatsappHome from "./welcome/WhatsappHome";
 import ChatContainer from "./ChatContainer";
-export {WhatsappHome, ChatContainer};
+import ChatActions from "./actions/ChatActions";
+export {WhatsappHome, ChatContainer,ChatActions};

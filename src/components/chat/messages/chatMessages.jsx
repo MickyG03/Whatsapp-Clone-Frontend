@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Message from './Message';
-import TraingleIcon from "../../../svg/triangle";
 
 const ChatMessages = () => {
 
