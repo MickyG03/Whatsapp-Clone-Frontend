@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import{CloseIcon, EmojiIcon} from "../../../svg"
 import EmojiPicker from 'emoji-picker-react';
 const EmojiPickerApp = ({
-    textRef,message,setMessage}) =>
+    textRef,message,setMessage,showPicker,setShowPicker, setShowAttachments}) =>
 {
-    const [showPicker,setShowPicker]=useState(false);
+
     const [cursorPosition, setCursorPosition] = useState();
     useEffect(() => {
         textRef.current.selectionEnd = cursorPosition;
@@ -25,7 +25,7 @@ const EmojiPickerApp = ({
             className="btn"
             type="button"
             onClick={() => {
-
+                setShowAttachments(false);
             setShowPicker((prev) => !prev);
             }}
         >

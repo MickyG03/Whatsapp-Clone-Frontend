@@ -39,7 +39,7 @@ const Message = ({message,me}) => {
                      <TraingleIcon className="dark:fill-dark_bg_2 rotate-[60deg] absolute top-[-5px] -left-1.5" />
                 </span>
                 ) : <span>
-                <TraingleIcon className="fill-green_3 rotate-[60deg] absolute top-[-5px] -right-2.5" />
+                <TraingleIcon className="fill-green_3 rotate-[60deg] absolute top-[-5px] -right-2" />
            </span>}
             </div>
             </div>
