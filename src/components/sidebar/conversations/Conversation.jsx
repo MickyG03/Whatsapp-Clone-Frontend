@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { capitalize } from "../../../utils/string";
 
 const Conversation = ({convo}) => {
+
     const dispatch = useDispatch();
     const {user}= useSelector((state)=> state.user);
     const{token} = user;

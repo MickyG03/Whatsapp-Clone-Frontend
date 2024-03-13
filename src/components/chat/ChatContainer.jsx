@@ -15,7 +15,7 @@ const ChatContainer = () => {
         token,
         convo_id:activeConversation?._id,
     }
-    console.log(activeConversation)
+    // console.log(activeConversation)
     useEffect(()=>{
 
         if(activeConversation?._id){
@@ -23,7 +23,7 @@ const ChatContainer = () => {
             dispatch(getConversationMessages(values))
         }
     },[activeConversation]);
-    console.log("messages",messages);
+
     return (
         <div className="relative w-full h-full border-l dark:border-l-darkborder_2 select-none
         overflow-hidden">

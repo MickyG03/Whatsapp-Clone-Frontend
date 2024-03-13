@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Input = ({message,setMessage}) => {
+const Input = ({message,setMessage,textRef}) => {
     const onChangeHandler=(e)=>{
         setMessage(e.target.value);
     }
@@ -10,6 +10,7 @@ const Input = ({message,setMessage}) => {
             placeholder="Type a message"
             value={message}
             onChange={onChangeHandler}
+            ref={textRef}
             >
             </input>
         </div>

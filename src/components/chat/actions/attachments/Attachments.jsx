@@ -1,4 +1,4 @@
-import { AttachmentIcon } from "../../../svg";
+import { AttachmentIcon } from "../../../../svg";
 
 const Attachments = () => {
     return (
