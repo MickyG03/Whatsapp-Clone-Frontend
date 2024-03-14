@@ -97,7 +97,6 @@ export const chatSlice = createSlice({
                 state.messages=[...state.messages, action.payload];
             }
 
-
             let conversation = {...action.payload.conversation,
                 latestMessage:action.payload,
             };
