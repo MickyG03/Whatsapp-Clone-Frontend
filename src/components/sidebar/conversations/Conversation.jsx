@@ -1,9 +1,8 @@
 import { open_create_conversations } from "../../../features/chatSlice";
-import { getConversationId } from "../../../utils/chat";
+import { getConversationId, getConversationName, getConversationPicture } from "../../../utils/chat";
 import { dateHandler } from "../../../utils/date";
 import { useDispatch, useSelector } from "react-redux";
 import { capitalize } from "../../../utils/string";
-import { Socket } from "socket.io-client";
 import SocketContext from "../../../context/SocketContext";
 
 function Conversation({convo,socket }){
@@ -31,12 +30,12 @@ function Conversation({convo,socket }){
                         <div className="flex items-center  gap-x-3">
 
                             <div className="relative min-w-[50px] max-w-[50px] h-[50px] rounded-full overflow-hidden">
-                                <img src={convo.picture} alt={convo.name} className="w-full h-full object-cover"/>
+                                <img src={getConversationPicture(user,convo.users)} alt={convo.name} className="w-full h-full object-cover"/>
                             </div>
 
                             <div className="w-full flex flex-col">
                                 <h1 className="font-bold flex items-center gap-x-2">
-                                    {capitalize(convo.name)}
+                                    {capitalize(getConversationName(user,convo.users))}
                                 </h1>
                                 <div>
                                     <div className="flex item-center gap-x-1 dark:text-dark_text_2">
