@@ -5,18 +5,18 @@ export default function ContactIcon() {
       height="53"
       width="53"
       preserveAspectRatio="xMidYMid meet"
-      class=""
+      className=""
       version="1.1"
       x="0px"
       y="0px"
-      enable-background="new 0 0 53 53"
+      enableBackground="new 0 0 53 53"
     >
       <g>
         <defs>
           <circle id="contact-SVGID_1_" cx="26.5" cy="26.5" r="25.5"></circle>
         </defs>
         <clipPath id="contact-SVGID_2_"></clipPath>
-        <g clip-path="url(#contact-SVGID_2_)">
+        <g clipPath="url(#contact-SVGID_2_)">
           <g>
             <path
               fill="#0795DC"

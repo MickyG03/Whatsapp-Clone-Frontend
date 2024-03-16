@@ -8,12 +8,14 @@ import Register from "./pages/register";
 import { io } from 'socket.io-client';
 import { useEffect } from 'react';
 import SocketContext from './context/SocketContext';
+import { useSelector } from 'react-redux';
 
 const socket=io(process.env.REACT_APP_API_ENDPOINT.split('/api/v1')[0]);
 
 
 function App() {
 
+  const {files} = useSelector((state) => state.chat);
 
   return (
     <div className='dark'>

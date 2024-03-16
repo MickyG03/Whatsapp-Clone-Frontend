@@ -5,6 +5,8 @@ import {
     PollIcon,
     StickerIcon,
   } from "../../../../../svg";
+import DocumentAttachment from "./DocumentAttachment";
+import PhotoAttachment from "./PhotoAttachment";
 //   import DocumentAttachment from "./DocumentAttachment";
 //   import PhotoAttachment from "./PhotoAttachment";
   
@@ -21,7 +23,7 @@ import {
             <ContactIcon />
           </button>
         </li>
-        {/* <DocumentAttachment /> */}
+        <DocumentAttachment />
         <li>
           <button type="button" className="bg-[#D3396D] rounded-full">
             <CameraIcon />
@@ -32,7 +34,7 @@ import {
             <StickerIcon />
           </button>
         </li>
-        {/* <PhotoAttachment /> */}
+        <PhotoAttachment />
       </ul>
     );
   }

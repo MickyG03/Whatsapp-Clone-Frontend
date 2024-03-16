@@ -5,7 +5,7 @@ export default function PollIcon() {
       height="53"
       width="53"
       preserveAspectRatio="xMidYMid meet"
-      class=""
+      className=""
       fill="none"
     >
       <circle cx="26.5" cy="26.5" r="26.5" fill="#02A698"></circle>
