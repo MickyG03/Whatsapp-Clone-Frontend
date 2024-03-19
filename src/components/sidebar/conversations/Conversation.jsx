@@ -13,6 +13,7 @@ function Conversation({convo,socket,online, typing }){
     const {activeConversation} = useSelector((state)=> state.chat);
     const values = {
         receiver_id:getConversationId(user,convo.users),
+        isGroup:convo.isGroup ? convo._id : false,
         token,
     }
     const openConversation=async()=>{
@@ -22,20 +23,27 @@ function Conversation({convo,socket,online, typing }){
     return (
 
         <li
-        onClick={()=>openConversation()}
-        className={` list-none h-[72px]  w-full dark:bg-dark_bg_1 hover:${convo._id !== activeConversation._id ? "dark:bg-dark_bg_2" : ""}
-        cursor-pointer dark:text-dark_text_1 px-[10px] ${convo._id === activeConversation._id ? "dark:bg-dark_hover_1" : ""}`}>
+        onClick={() => openConversation()}
+        className={`list-none h-[72px] w-full dark:bg-dark_bg_1 hover:${
+          convo._id !== activeConversation._id ? "dark:bg-dark_bg_2" : ""
+        } cursor-pointer dark:text-dark_text_1 px-[10px] ${
+          convo._id === activeConversation._id ? "dark:bg-dark_hover_1" : ""
+        }`}
+      >
 
                     <div className="relative w-full flex items-center justify-between py-[10px]">
                         <div className="flex items-center  gap-x-3">
 
                             <div className={`relative min-w-[50px] max-w-[50px] h-[50px] rounded-full overflow-hidden ${online ? "online" : ""}`}>
-                                <img src={getConversationPicture(user,convo.users)} alt={convo.name} className="w-full h-full object-cover"/>
+                                <img src={ convo.isGroup ? convo.picture
+                                    : getConversationPicture(user,convo.users)}
+                                    alt={convo.name} className="w-full h-full object-cover"/>
                             </div>
 
                             <div className="w-full flex flex-col">
                                 <h1 className="font-bold flex items-center gap-x-2">
-                                    {capitalize(getConversationName(user,convo.users))}
+                                    {convo.isGroup ? convo.name
+                                    : capitalize(getConversationName(user,convo.users))}
                                 </h1>
                                 <div>
                                     <div className="flex item-center gap-x-1 dark:text-dark_text_2">

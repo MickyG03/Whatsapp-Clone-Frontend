@@ -16,7 +16,7 @@ const Conversations = ({onlineUsers, typing}) => {
               (c) =>
                 c.latestMessage ||
                 c._id === activeConversation._id ||
-                c.isGroup == true
+                c.isGroup === true
             )
             .map((convo) => {
               let check = checkOnlineStatus(onlineUsers, user, convo.users);
@@ -24,8 +24,8 @@ const Conversations = ({onlineUsers, typing}) => {
                 <Conversation
                   convo={convo}
                   key={convo._id}
-                //   online={!convo.isGroup && check ? true : false}
-                  online={check ? true : false}
+                  online={!convo.isGroup && check ? true : false}
+                  // online={check ? true : false}
                   typing={typing}
                   //   typing={typing}
                 />
