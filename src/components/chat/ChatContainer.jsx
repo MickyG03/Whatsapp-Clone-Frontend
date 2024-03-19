@@ -7,7 +7,7 @@ import ChatActions from './actions/ChatActions.jsx';
 import { checkOnlineStatus } from '../../utils/chat.js';
 import FilesPreview from './preview/files/FilesPreview.jsx';
 
-const ChatContainer = ({onlineUsers, typing}) => {
+const ChatContainer = ({onlineUsers, typing, callUser}) => {
     const dispatch = useDispatch();
     const {activeConversation, messages} = useSelector((state)=> state.chat);
     const {user} = useSelector((state)=> state.user);
@@ -30,7 +30,7 @@ const ChatContainer = ({onlineUsers, typing}) => {
         <div className="relative w-full h-full border-l dark:border-l-dark_border_2 select-none
         overflow-hidden">
             <div>
-                <ChatHeader online={checkOnlineStatus(onlineUsers,user,activeConversation.users)}/>
+                <ChatHeader online={checkOnlineStatus(onlineUsers,user,activeConversation.users)} callUser={callUser}/>
 
                 {
                 files.length>0 ?
