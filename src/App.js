@@ -1,4 +1,4 @@
-import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+import {BrowserRouter as Router,Routes,Route, Navigate} from 'react-router-dom';
 
 //Pages import
 import Home from "./pages/home";
@@ -15,15 +15,16 @@ const socket=io(process.env.REACT_APP_API_ENDPOINT.split('/api/v1')[0]);
 
 function App() {
 
-  const {files} = useSelector((state) => state.chat);
-
+  const {user} = useSelector((state) => state.user);
+  const {token} = user;
+  console.log(token);
   return (
     <div className='dark'>
       <SocketContext.Provider value={socket}>
         <Router>
           <Routes>
-            <Route exact path="/" element={<Home socket={socket}/>} />
-            <Route exact path="/login" element={<Login/>} />
+            <Route exact path="/" element={token ? <Home socket={socket}/> : <Navigate to="/login"/>} />
+            <Route exact path="/login" element={token ? <Login/> : <Navigate to="/"/>} />
             <Route exact path="/register" element={<Register/>} />
           </Routes>
           <div className='dark'></div>
