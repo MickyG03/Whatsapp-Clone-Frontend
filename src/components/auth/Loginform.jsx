@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import userSlice, { loginUser, registerUser } from "../../features/userSlice";
 
 
-export default function RegisterForm(){
+export default function LoginForm(){
     const dispatch=useDispatch();
     const navigate = useNavigate();
     const {status,error}=useSelector((state)=>state.user)
