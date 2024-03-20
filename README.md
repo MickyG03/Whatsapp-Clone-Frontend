@@ -6,14 +6,28 @@ Welcome to the WhatsApp Clone Web Application Frontend repository! This reposito
 
 - Real-time Messaging: Communicate with other users in real-time with ease and functionality.
 - Video Calls: Enjoy face-to-face communication with the integration of video calls, complete with ringing components and sounds.
+  ( I have used OBS to setup and use a virtual camera, to test videocalls )
 - Online Status: Display the online status of friends and colleagues in real-time.
 - File Sharing: Send various types of files including images, videos, documents, and more.
+- Image/Video Uploads: Utilize Cloudinary to store images and implement image uploading, searching, and filtering.
 - Group Chats: Collaborate and share ideas with multiple people simultaneously through group chats.
 - Typing Indicator: See when someone is typing a message, enhancing the user experience.
 - Emojis: Express yourself with a wide range of emojis to add personality to your conversations.
 - Advanced Search: Easily find contacts with email or username.
 - Authentication System: Secure login and registration processes with access and refresh tokens.
-- Image/Video Uploads: Utilize Cloudinary to store images and implement image uploading, searching, and filtering.
+
+## Results
+  ![output-1](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/aa7b93c4-e30f-48ca-9412-a9008074268c)
+  ![output-2](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/28299196-e253-4185-ba06-c70cc09cc4a5)
+  ![output-3](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/4acc6f7f-e43b-4cf5-b5d6-c9fd7d9605c1)
+  ![output-4](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/3fdb32b2-ff21-44ec-90d6-2e2999b39333)
+  ![output-6](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/c5567c24-deef-47f1-a185-ce765fa9359e)
+  ![output-5](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/2de7a5bf-c8f4-441f-834b-de6b48ebf6b5)
+  ![output-7](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/48b7c152-32c0-48a4-b0e9-62add660efb4)
+  ![output-8](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/5581b73d-f218-4953-8572-2cd6557421f4)
+
+
+
 
 ## Getting Started
 To get started with Whatsapp Clone, follow the steps:
