@@ -99,7 +99,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ## Tech
 For this project I have used following libraries:
 
-- [Node JS] - A JavaScript runtime built on Chrome's V8 JavaScript engine. It allows you to run JavaScript code on the server side. 
+- [Node JS] - A JavaScript runtime built on Chrome's JavaScript engine. It allows you to run JavaScript code on the server side. 
 - [Yarn] - A fast, reliable, and secure dependency management tool. It's used for managing project dependencies, ensuring consistency across different environments, and improving performance during the installation process.
 - [React JS] -  A JavaScript library for building user interfaces.
 - [Socket IO] - A JavaScript library for real-time web applications. It enables bidirectional communication between web clients and servers, allowing for real-time updates and messaging in applications.
