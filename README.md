@@ -35,11 +35,11 @@ To get started with Whatsapp Clone, follow the steps:
 #### 1. Clone Frontend and Backend repository: 
 Frontend:
 ```sh
-git clone "https://github.com/MickyG03/Whatsapp-Clone-Frontend"
+git clone "https://github.com/MickyG03/Whatsapp-Clone-Frontend.git"
 ```
 Backend:
 ```sh
-git clone "https://github.com/MickyG03/Whatsapp-Clone-Backend"
+git clone "https://github.com/MickyG03/Whatsapp-Clone-Backend.git"
 ```
 #### 2. Node JS and NPM installation: 
 [Node Js]: Make sure you have Node JS and NPM package manager installed on your system.
