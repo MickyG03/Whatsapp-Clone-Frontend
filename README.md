@@ -96,6 +96,15 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.\
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Network Sockets Process Flow Diagram
+
+![image](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/a06106af-8ab6-4f38-93e4-5445ee40041d)
+
+![image](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/ad738772-8caa-402c-82ac-efe1dca2b14e)
+
+![image](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/0588fed7-a5ba-462d-be1b-ceb00a6443a7)
+
+
 ## Tech
 For this project I have used following libraries:
 
