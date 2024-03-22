@@ -100,9 +100,10 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ![image](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/a06106af-8ab6-4f38-93e4-5445ee40041d)
 
-![image](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/ad738772-8caa-402c-82ac-efe1dca2b14e)
+![image](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/8adb76ab-788d-494f-9c7d-9bda79445dfa)
 
-![image](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/0588fed7-a5ba-462d-be1b-ceb00a6443a7)
+![image](https://github.com/MickyG03/Whatsapp-Clone-Frontend/assets/76037226/268d3fcb-6cd5-4c14-a94f-2d4fddc7c7a0)
+
 
 
 ## Tech
